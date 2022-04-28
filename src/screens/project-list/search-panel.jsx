@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 export const SearchPanel = ({users, param, setParam}) => {
 
@@ -18,7 +18,7 @@ export const SearchPanel = ({users, param, setParam}) => {
 
         <option value={''}>Manager</option>
         {
-            users.map(user => <option value={user.id}>
+            users.map(user => <option key={user.id} value={user.id}>
                 {user.name}</option>)
         }
         </select>
